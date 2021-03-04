@@ -73,7 +73,10 @@ function battle:load()
         table.insert(self.player_units, unit)
     end
     for _, unit in pairs(battle_data.starting_enemy_units) do
-        local enemy = data.enemy(unit.class.name)
+        local enemy = data.enemy(unit.name)
+        local x, y = unpack(unit.position)
+        local unit = Unit.new(x, y, enemy)
+        table.insert(self.enemy_units, unit)
     end
     for _, unit in pairs(battle_data.starting_neutral_units) do
     end
@@ -139,14 +142,15 @@ function battle:draw_map()
     love.graphics.setColor(1, 1, 1)
     self.map:draw(MAP_OFFSET_X, MAP_OFFSET_Y)
     for _, unit in pairs(self.player_units) do
-        unit:draw_sprite(MAP_OFFSET_X, MAP_OFFSET_Y)
+        unit:draw_sprite(MAP_OFFSET_X, MAP_OFFSET_Y, "player")
     end
     for _, unit in pairs(self.enemy_units) do
-        unit:draw_sprite(MAP_OFFSET_X, MAP_OFFSET_Y)
+        unit:draw_sprite(MAP_OFFSET_X, MAP_OFFSET_Y, "enemy")
     end
     for _, unit in pairs(self.neutral_units) do
-        unit:draw_sprite(MAP_OFFSET_X, MAP_OFFSET_Y)
+        unit:draw_sprite(MAP_OFFSET_X, MAP_OFFSET_Y, "neutral")
     end
+    love.graphics.setColor(1, 1, 1)
     for _, animation in pairs(self.map_animations) do
         animation:draw()
     end

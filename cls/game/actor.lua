@@ -106,15 +106,17 @@ function Actor.new(name, actor_data)
     end
 
     -- Growth Stats
-    self.growth_health     = actor_data.stats.growth.health          -- Probability that health will increase on level-up.
-    self.growth_move       = actor_data.stats.growth.move_distance   -- Probability that move will increase on level-up.
-    self.growth_vision     = actor_data.stats.growth.vision_distance -- Probability that vision will increase on level-up.
-    self.growth_strength   = actor_data.stats.growth.strength        -- Probability that strength will increase on level-up.
-    self.growth_defence    = actor_data.stats.growth.defence         -- Probability that defence will increase on level-up.
-    self.growth_magic      = actor_data.stats.growth.magic           -- Probability that magic will increase on level-up.
-    self.growth_resistance = actor_data.stats.growth.resistance      -- Probability that resistance will increase on level-up.
-    self.growth_speed      = actor_data.stats.growth.speed           -- Probability that speed will increase on level-up.
-    self.growth_skill      = actor_data.stats.growth.skill           -- Probability that skill will increase on level-up.
+    if actor_data.stats.growth then
+        self.growth_health     = actor_data.stats.growth.health          -- Probability that health will increase on level-up.
+        self.growth_move       = actor_data.stats.growth.move_distance   -- Probability that move will increase on level-up.
+        self.growth_vision     = actor_data.stats.growth.vision_distance -- Probability that vision will increase on level-up.
+        self.growth_strength   = actor_data.stats.growth.strength        -- Probability that strength will increase on level-up.
+        self.growth_defence    = actor_data.stats.growth.defence         -- Probability that defence will increase on level-up.
+        self.growth_magic      = actor_data.stats.growth.magic           -- Probability that magic will increase on level-up.
+        self.growth_resistance = actor_data.stats.growth.resistance      -- Probability that resistance will increase on level-up.
+        self.growth_speed      = actor_data.stats.growth.speed           -- Probability that speed will increase on level-up.
+        self.growth_skill      = actor_data.stats.growth.skill           -- Probability that skill will increase on level-up.
+    end
 
     return self
 end

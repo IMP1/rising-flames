@@ -9,9 +9,8 @@ return {
     },
     starting_enemy_units = {
         { 
-            name = "bandit_1", 
+            name = "bandit_fighter", 
             position = {1, 0}, 
-            class = actor.Class.FIGHTER,
         }, 
     },
     starting_neutral_units = {},

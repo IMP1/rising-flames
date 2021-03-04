@@ -2,12 +2,12 @@ local resource_manager = {}
 
 local faces = {}
 
-function resource_manager.actor_face(actor_name)
-    if faces[actor_name] == nil then
-        local path = "res/gfx/faces/" .. actor_name .. ".png"
-        faces[actor_name] = love.graphics.newImage(path)
+function resource_manager.face(char_name)
+    if faces[char_name] == nil then
+        local path = "res/gfx/faces/" .. char_name .. ".png"
+        faces[char_name] = love.graphics.newImage(path)
     end
-    return faces[actor_name]
+    return faces[char_name]
 end
 
 local function load_faces() 
