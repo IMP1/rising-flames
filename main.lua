@@ -12,9 +12,5 @@ function love.update(dt)
 end
 
 function love.draw()
-    local x = love.graphics.getWidth() / 2
-    local y = love.graphics.getHeight() / 2
-    love.graphics.line(x, 0, x, 2 * y)
-    love.graphics.line(0, y, 2 * x, y)
     scene_manager.draw()
 end
