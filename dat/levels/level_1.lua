@@ -11,9 +11,10 @@ return {
         { 
             name = "bandit_1", 
             position = {1, 0}, 
-            class = actor.Class.FIGHTER 
+            class = actor.Class.FIGHTER,
         }, 
     },
     starting_neutral_units = {},
+    first_turn = "player",
     triggers = {},
 }
