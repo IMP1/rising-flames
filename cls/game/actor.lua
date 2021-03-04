@@ -14,46 +14,57 @@ Actor.MovementType = {
 
 Actor.Class = {
     LORD = {
+        name = "Lord",
         movement_type = Actor.MovementType.FOOT,
         strength      = 1.0,
     },
     THIEF = {
+        name = "Thief",
         movement_type = Actor.MovementType.FOOT,
         strength      = 1.0,
     },
     FIGHTER = {
+        name = "Fighter",
         movement_type = Actor.MovementType.HEAVY,
         strength      = 1.0,
     },
     RANGER = {
+        name = "Ranger",
         movement_type = Actor.MovementType.HORSE,
         strength      = 1.0,
     },
     CAVALIER = {
+        name = "Cavalier",
         movement_type = Actor.MovementType.HORSE,
         strength      = 1.0,
     },
     KNIGHT = {
+        name = "Knight",
         movement_type = Actor.MovementType.ARMOUR,
         strength      = 1.0,
     },
     SHAMAN = {
+        name = "Shaman",
         movement_type = Actor.MovementType.MAGE,
         strength      = 1.0,
     },
     SAGE = {
+        name = "Sage",
         movement_type = Actor.MovementType.MAGE,
         strength      = 1.0,
     },
     ARCHER = {
+        name = "Archer",
         movement_type = Actor.MovementType.FOOT,
         strength      = 1.0,
     },
     WYVERN_RIDER = {
+        name = "Wyvern Rider",
         movement_type = Actor.MovementType.FLYING,
         strength      = 1.0,
     },
     CORSAIR = {
+        name = "Corsair",
         movement_type = Actor.MovementType.PIRATE,
         strength      = 1.0,
     },
